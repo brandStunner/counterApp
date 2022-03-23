@@ -1,0 +1,24 @@
+let saveEl = document.getElementById("save-el")
+let countEl = document.getElementById("count-el")
+let decreaseEl = document.getElementById("count-el")
+let count = 0
+
+function increment() {
+    count += 1
+    countEl.textContent = count
+}
+
+function decrement(){
+   
+    count -= 1
+    if (count < 0){
+       return  0
+    } else
+    decreaseEl.textContent = count
+}
+
+function save() {
+     let countStr = count + " - "
+    saveEl.textContent += countStr
+}
+
